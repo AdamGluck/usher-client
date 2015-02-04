@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F3CD0FC1A81FE6900AA8E49 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CD0FB1A81FE6900AA8E49 /* main.m */; };
+		0F3CD0FF1A81FE6900AA8E49 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CD0FE1A81FE6900AA8E49 /* AppDelegate.m */; };
+		0F3CD1051A81FE6900AA8E49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F3CD1031A81FE6900AA8E49 /* Main.storyboard */; };
+		0F3CD1071A81FE6900AA8E49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F3CD1061A81FE6900AA8E49 /* Images.xcassets */; };
+		0F3CD10A1A81FE6900AA8E49 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F3CD1081A81FE6900AA8E49 /* LaunchScreen.xib */; };
+		0F3CD1161A81FE6900AA8E49 /* UsherClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CD1151A81FE6900AA8E49 /* UsherClientTests.m */; };
+		0F3CD1211A81FE9D00AA8E49 /* USHMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CD1201A81FE9D00AA8E49 /* USHMapViewController.m */; };
+		0F3CD12A1A82077E00AA8E49 /* USHRestaurantAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CD1291A82077E00AA8E49 /* USHRestaurantAnnotationView.m */; };
+		0F3CD12D1A8207D900AA8E49 /* USHRestaurantAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CD12C1A8207D900AA8E49 /* USHRestaurantAnnotation.m */; };
+		0F3CD1311A82091C00AA8E49 /* USHRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CD1301A82091C00AA8E49 /* USHRestaurant.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F3CD1101A81FE6900AA8E49 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F3CD0EE1A81FE6900AA8E49 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F3CD0F51A81FE6900AA8E49;
+			remoteInfo = UsherClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0F3CD0F61A81FE6900AA8E49 /* UsherClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsherClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F3CD0FA1A81FE6900AA8E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F3CD0FB1A81FE6900AA8E49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0F3CD0FD1A81FE6900AA8E49 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0F3CD0FE1A81FE6900AA8E49 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0F3CD1041A81FE6900AA8E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F3CD1061A81FE6900AA8E49 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0F3CD1091A81FE6900AA8E49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0F3CD10F1A81FE6900AA8E49 /* UsherClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsherClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F3CD1141A81FE6900AA8E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F3CD1151A81FE6900AA8E49 /* UsherClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UsherClientTests.m; sourceTree = "<group>"; };
+		0F3CD11F1A81FE9D00AA8E49 /* USHMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = USHMapViewController.h; path = ../USHMapViewController.h; sourceTree = "<group>"; };
+		0F3CD1201A81FE9D00AA8E49 /* USHMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = USHMapViewController.m; path = ../USHMapViewController.m; sourceTree = "<group>"; };
+		0F3CD1281A82077E00AA8E49 /* USHRestaurantAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHRestaurantAnnotationView.h; sourceTree = "<group>"; };
+		0F3CD1291A82077E00AA8E49 /* USHRestaurantAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHRestaurantAnnotationView.m; sourceTree = "<group>"; };
+		0F3CD12B1A8207D900AA8E49 /* USHRestaurantAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHRestaurantAnnotation.h; sourceTree = "<group>"; };
+		0F3CD12C1A8207D900AA8E49 /* USHRestaurantAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHRestaurantAnnotation.m; sourceTree = "<group>"; };
+		0F3CD12F1A82091C00AA8E49 /* USHRestaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHRestaurant.h; sourceTree = "<group>"; };
+		0F3CD1301A82091C00AA8E49 /* USHRestaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHRestaurant.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F3CD0F31A81FE6900AA8E49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F3CD10C1A81FE6900AA8E49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F3CD0ED1A81FE6900AA8E49 = {
+			isa = PBXGroup;
+			children = (
+				0F3CD0F81A81FE6900AA8E49 /* UsherClient */,
+				0F3CD1121A81FE6900AA8E49 /* UsherClientTests */,
+				0F3CD0F71A81FE6900AA8E49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0F3CD0F71A81FE6900AA8E49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD0F61A81FE6900AA8E49 /* UsherClient.app */,
+				0F3CD10F1A81FE6900AA8E49 /* UsherClientTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F3CD0F81A81FE6900AA8E49 /* UsherClient */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD12E1A82090300AA8E49 /* Model */,
+				0F3CD1231A81FF7800AA8E49 /* View Controllers */,
+				0F3CD1221A81FEA900AA8E49 /* AppDelegate */,
+				0F3CD1031A81FE6900AA8E49 /* Main.storyboard */,
+				0F3CD1061A81FE6900AA8E49 /* Images.xcassets */,
+				0F3CD1081A81FE6900AA8E49 /* LaunchScreen.xib */,
+				0F3CD0F91A81FE6900AA8E49 /* Supporting Files */,
+			);
+			path = UsherClient;
+			sourceTree = "<group>";
+		};
+		0F3CD0F91A81FE6900AA8E49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD0FA1A81FE6900AA8E49 /* Info.plist */,
+				0F3CD0FB1A81FE6900AA8E49 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F3CD1121A81FE6900AA8E49 /* UsherClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD1151A81FE6900AA8E49 /* UsherClientTests.m */,
+				0F3CD1131A81FE6900AA8E49 /* Supporting Files */,
+			);
+			path = UsherClientTests;
+			sourceTree = "<group>";
+		};
+		0F3CD1131A81FE6900AA8E49 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD1141A81FE6900AA8E49 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F3CD1221A81FEA900AA8E49 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD0FD1A81FE6900AA8E49 /* AppDelegate.h */,
+				0F3CD0FE1A81FE6900AA8E49 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		0F3CD1231A81FF7800AA8E49 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD1241A81FF8200AA8E49 /* Map View Controller */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		0F3CD1241A81FF8200AA8E49 /* Map View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD12B1A8207D900AA8E49 /* USHRestaurantAnnotation.h */,
+				0F3CD12C1A8207D900AA8E49 /* USHRestaurantAnnotation.m */,
+				0F3CD1281A82077E00AA8E49 /* USHRestaurantAnnotationView.h */,
+				0F3CD1291A82077E00AA8E49 /* USHRestaurantAnnotationView.m */,
+				0F3CD11F1A81FE9D00AA8E49 /* USHMapViewController.h */,
+				0F3CD1201A81FE9D00AA8E49 /* USHMapViewController.m */,
+			);
+			name = "Map View Controller";
+			sourceTree = "<group>";
+		};
+		0F3CD12E1A82090300AA8E49 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD1321A820A4100AA8E49 /* Restaurant */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0F3CD1321A820A4100AA8E49 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD12F1A82091C00AA8E49 /* USHRestaurant.h */,
+				0F3CD1301A82091C00AA8E49 /* USHRestaurant.m */,
+			);
+			name = Restaurant;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F3CD0F51A81FE6900AA8E49 /* UsherClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F3CD1191A81FE6900AA8E49 /* Build configuration list for PBXNativeTarget "UsherClient" */;
+			buildPhases = (
+				0F3CD0F21A81FE6900AA8E49 /* Sources */,
+				0F3CD0F31A81FE6900AA8E49 /* Frameworks */,
+				0F3CD0F41A81FE6900AA8E49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UsherClient;
+			productName = UsherClient;
+			productReference = 0F3CD0F61A81FE6900AA8E49 /* UsherClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0F3CD10E1A81FE6900AA8E49 /* UsherClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F3CD11C1A81FE6900AA8E49 /* Build configuration list for PBXNativeTarget "UsherClientTests" */;
+			buildPhases = (
+				0F3CD10B1A81FE6900AA8E49 /* Sources */,
+				0F3CD10C1A81FE6900AA8E49 /* Frameworks */,
+				0F3CD10D1A81FE6900AA8E49 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F3CD1111A81FE6900AA8E49 /* PBXTargetDependency */,
+			);
+			name = UsherClientTests;
+			productName = UsherClientTests;
+			productReference = 0F3CD10F1A81FE6900AA8E49 /* UsherClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F3CD0EE1A81FE6900AA8E49 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = USH;
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Usher;
+				TargetAttributes = {
+					0F3CD0F51A81FE6900AA8E49 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					0F3CD10E1A81FE6900AA8E49 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 0F3CD0F51A81FE6900AA8E49;
+					};
+				};
+			};
+			buildConfigurationList = 0F3CD0F11A81FE6900AA8E49 /* Build configuration list for PBXProject "UsherClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F3CD0ED1A81FE6900AA8E49;
+			productRefGroup = 0F3CD0F71A81FE6900AA8E49 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F3CD0F51A81FE6900AA8E49 /* UsherClient */,
+				0F3CD10E1A81FE6900AA8E49 /* UsherClientTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F3CD0F41A81FE6900AA8E49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F3CD1051A81FE6900AA8E49 /* Main.storyboard in Resources */,
+				0F3CD10A1A81FE6900AA8E49 /* LaunchScreen.xib in Resources */,
+				0F3CD1071A81FE6900AA8E49 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F3CD10D1A81FE6900AA8E49 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F3CD0F21A81FE6900AA8E49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F3CD0FF1A81FE6900AA8E49 /* AppDelegate.m in Sources */,
+				0F3CD1311A82091C00AA8E49 /* USHRestaurant.m in Sources */,
+				0F3CD0FC1A81FE6900AA8E49 /* main.m in Sources */,
+				0F3CD12A1A82077E00AA8E49 /* USHRestaurantAnnotationView.m in Sources */,
+				0F3CD1211A81FE9D00AA8E49 /* USHMapViewController.m in Sources */,
+				0F3CD12D1A8207D900AA8E49 /* USHRestaurantAnnotation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F3CD10B1A81FE6900AA8E49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F3CD1161A81FE6900AA8E49 /* UsherClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F3CD1111A81FE6900AA8E49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F3CD0F51A81FE6900AA8E49 /* UsherClient */;
+			targetProxy = 0F3CD1101A81FE6900AA8E49 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0F3CD1031A81FE6900AA8E49 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F3CD1041A81FE6900AA8E49 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0F3CD1081A81FE6900AA8E49 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F3CD1091A81FE6900AA8E49 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F3CD1171A81FE6900AA8E49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0F3CD1181A81FE6900AA8E49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F3CD11A1A81FE6900AA8E49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UsherClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0F3CD11B1A81FE6900AA8E49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UsherClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0F3CD11D1A81FE6900AA8E49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UsherClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UsherClient.app/UsherClient";
+			};
+			name = Debug;
+		};
+		0F3CD11E1A81FE6900AA8E49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UsherClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UsherClient.app/UsherClient";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F3CD0F11A81FE6900AA8E49 /* Build configuration list for PBXProject "UsherClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F3CD1171A81FE6900AA8E49 /* Debug */,
+				0F3CD1181A81FE6900AA8E49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F3CD1191A81FE6900AA8E49 /* Build configuration list for PBXNativeTarget "UsherClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F3CD11A1A81FE6900AA8E49 /* Debug */,
+				0F3CD11B1A81FE6900AA8E49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0F3CD11C1A81FE6900AA8E49 /* Build configuration list for PBXNativeTarget "UsherClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F3CD11D1A81FE6900AA8E49 /* Debug */,
+				0F3CD11E1A81FE6900AA8E49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F3CD0EE1A81FE6900AA8E49 /* Project object */;
+}
