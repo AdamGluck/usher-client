@@ -9,8 +9,13 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
+#import "USHRestaurant.h"
+
 @interface USHRestaurantAnnotation : NSObject <MKAnnotation>
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, strong, readonly) USHRestaurant *restaurant;
+
+- (instancetype)initWithRestaurant:(USHRestaurant *)restaurant;
 
 @end

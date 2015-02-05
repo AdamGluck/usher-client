@@ -11,6 +11,8 @@
 
 @interface USHRestaurantAnnotationView : MKAnnotationView
 
+@property (nonatomic, strong, readonly) USHRestaurantAnnotation *restaurantAnnotation;
+
 - (instancetype)initWithRestaurantAnnotation:(USHRestaurantAnnotation *)restaurantAnnotation
                              reuseIdentifier:(NSString *)reuseIdentifier;
 

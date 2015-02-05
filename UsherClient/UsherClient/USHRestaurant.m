@@ -8,18 +8,48 @@
 
 #import "USHRestaurant.h"
 
+@interface USHRestaurant()
+
+@property (nonatomic) USHRestaurantWaitType waitType;
+@property (nonatomic) NSInteger waitTime;
+@property (nonatomic) CLLocationCoordinate2D locationCoordinate;
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) NSString *phone;
+@property (nonatomic, strong) NSArray *descriptors;
+
+@end
+
 @implementation USHRestaurant
 
 - (instancetype)initWithRestaurantInfo:(NSDictionary *)restaurantInfo
 {
     self = [super init];
     if (self) {
-        _waitTime = [restaurantInfo[@"waitTime"] integerValue];
-        _name = restaurantInfo[@"name"];
-        _descriptors = restaurantInfo[@"descriptors"];
+        self.waitTime = [restaurantInfo[@"waitTime"] integerValue];
+        self.waitType = [self _waitTypeFromString:restaurantInfo[@"waitType"]];
+        self.locationCoordinate = CLLocationCoordinate2DMake([restaurantInfo[@"latitude"] doubleValue], [restaurantInfo[@"longitude"] doubleValue]);
         
+        self.name = restaurantInfo[@"name"];
+        self.address = restaurantInfo[@"address"];
+        self.phone = restaurantInfo[@"phone"];
+        self.descriptors = restaurantInfo[@"descriptors"];
     }
     return self;
+}
+
+#pragma mark - internal
+
+- (USHRestaurantWaitType)_waitTypeFromString:(NSString *)string
+{
+    if ([string isEqualToString:@"short"]) {
+        return USHRestaurantWaitTypeShort;
+    } else if ([string isEqualToString:@"long"]) {
+        return  USHRestaurantWaitTypeLong;
+    } else {
+        return USHRestaurantWaitTypeNone;
+    }
 }
 
 @end

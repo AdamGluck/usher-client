@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Usher. All rights reserved.
 //
 
+#import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
 
 typedef NS_ENUM(NSInteger, USHRestaurantWaitType) {
@@ -18,8 +19,12 @@ typedef NS_ENUM(NSInteger, USHRestaurantWaitType) {
 
 @property (nonatomic, readonly) USHRestaurantWaitType waitType;
 @property (nonatomic, readonly) NSInteger waitTime;
-@property (nonatomic, readonly) NSString *name;
-@property (nonatomic, readonly) NSArray *descriptors;
+@property (nonatomic, readonly) CLLocationCoordinate2D locationCoordinate;
+
+@property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSString *address;
+@property (nonatomic, strong, readonly) NSString *phone;
+@property (nonatomic, strong, readonly) NSArray *descriptors;
 
 - (instancetype)initWithRestaurantInfo:(NSDictionary *)restaurantInfo;
 

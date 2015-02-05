@@ -7,11 +7,16 @@
 //
 
 #import "USHMapViewController.h"
+#import "USHRestaurant.h"
+#import "USHRestaurantAnnotation.h"
+#import "USHRestaurantAnnotationView.h"
+#import "USHService.h"
+
 #import <MapKit/MapKit.h>
 
 @interface USHMapViewController () <MKMapViewDelegate>
 
-@property (strong, nonatomic) MKMapView *mapView;
+@property (nonatomic, strong) MKMapView *mapView;
 
 @end
 
@@ -21,14 +26,47 @@
 {
     [super viewDidLoad];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_restaurantsUpdated:) name:USHServiceRestaurantsUpdated object:nil];
+    
+    [USHServiceSharedInstance start];
+    
     [self.view addSubview:self.mapView];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - MKMapViewDelegate 
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    USHRestaurantAnnotationView *restaurantAnnotationView;
+    if ([annotation isKindOfClass:[USHRestaurantAnnotation class]]) {
+        restaurantAnnotationView = (USHRestaurantAnnotationView *)[self.mapView dequeueReusableAnnotationViewWithIdentifier:@"USHRestaurantAnnotationView"];
+        if (!restaurantAnnotationView) {
+            restaurantAnnotationView = [[USHRestaurantAnnotationView alloc] initWithRestaurantAnnotation:(USHRestaurantAnnotation *)annotation reuseIdentifier:@"USHRestaurantAnnotationView"];
+        }
+    }
+    return restaurantAnnotationView;
 }
 
 #pragma mark - Internal
 
+- (void)_restaurantsUpdated:(NSNotification *)notification
+{
+    NSDictionary *userInfo = notification.userInfo;
+    NSArray *restaurants = userInfo[USHServiceRestaurantsInfoKey];
+    USHRestaurant *restaurant = [restaurants firstObject];
+    USHRestaurantAnnotation *restaurantAnnotation = [[USHRestaurantAnnotation alloc] initWithRestaurant:restaurant];
+    [self.mapView addAnnotation:restaurantAnnotation];
+}
+
 - (CLLocationCoordinate2D)_centerCoordinate
 {
-    return CLLocationCoordinate2DMake(38.890932, -77.035681);;
+    // D.C. for now
+    return CLLocationCoordinate2DMake(38.890932, -77.035681);
 }
 
 - (MKCoordinateRegion)_centerRegion
