@@ -10,6 +10,7 @@
 #import "USHRestaurant.h"
 #import "USHRestaurantAnnotation.h"
 #import "USHRestaurantAnnotationView.h"
+#import "USHRestaurantDetailViewController.h"
 #import "USHService.h"
 
 #import <MapKit/MapKit.h>
@@ -17,6 +18,7 @@
 @interface USHMapViewController () <MKMapViewDelegate>
 
 @property (nonatomic, strong) MKMapView *mapView;
+@property (nonatomic, strong) USHRestaurantDetailViewController *restaurantDetailController;
 
 @end
 
@@ -52,6 +54,16 @@
     return restaurantAnnotationView;
 }
 
+-(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    if ([view isKindOfClass:[USHRestaurantAnnotationView class]]) {
+        USHRestaurant *restaurant = ((USHRestaurantAnnotationView *)view).restaurantAnnotation.restaurant;
+        [self.restaurantDetailController presentInViewController:self
+                                                  withRestaurant:restaurant];
+    }
+}
+
+
 #pragma mark - Internal
 
 - (void)_restaurantsUpdated:(NSNotification *)notification
@@ -59,6 +71,7 @@
     NSDictionary *userInfo = notification.userInfo;
     NSArray *restaurants = userInfo[USHServiceRestaurantsInfoKey];
     USHRestaurant *restaurant = [restaurants firstObject];
+    
     USHRestaurantAnnotation *restaurantAnnotation = [[USHRestaurantAnnotation alloc] initWithRestaurant:restaurant];
     [self.mapView addAnnotation:restaurantAnnotation];
 }
@@ -92,6 +105,14 @@
         });
     }
     return _mapView;
+}
+
+- (USHRestaurantDetailViewController *)restaurantDetailController
+{
+    if (!_restaurantDetailController) {
+        _restaurantDetailController = [[USHRestaurantDetailViewController alloc] init];
+    }
+    return _restaurantDetailController;
 }
 
 @end

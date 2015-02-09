@@ -27,6 +27,11 @@
 		0F3CD15A1A835E3900AA8E49 /* short_wait.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3CD1511A835E3900AA8E49 /* short_wait.png */; };
 		0F3CD15B1A835E3900AA8E49 /* short_wait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3CD1521A835E3900AA8E49 /* short_wait@2x.png */; };
 		0F3CD15C1A835E3900AA8E49 /* short_wait@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3CD1531A835E3900AA8E49 /* short_wait@3x.png */; };
+		0F3CD1731A88346B00AA8E49 /* USHRestaurantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3CD1721A88346B00AA8E49 /* USHRestaurantDetailViewController.m */; };
+		0F3CD1781A88837B00AA8E49 /* line_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3CD1751A88837B00AA8E49 /* line_black.png */; };
+		0F3CD1791A88837B00AA8E49 /* line_black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3CD1761A88837B00AA8E49 /* line_black@2x.png */; };
+		0F3CD17A1A88837B00AA8E49 /* line_black@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F3CD1771A88837B00AA8E49 /* line_black@3x.png */; };
+		202B1A407535A7718AF70C03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 155511C45FC27522094925F9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070BFDFE28711A921AE17F6D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		0F3CD0F61A81FE6900AA8E49 /* UsherClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsherClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F3CD0FA1A81FE6900AA8E49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F3CD0FB1A81FE6900AA8E49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +76,13 @@
 		0F3CD1511A835E3900AA8E49 /* short_wait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = short_wait.png; sourceTree = "<group>"; };
 		0F3CD1521A835E3900AA8E49 /* short_wait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "short_wait@2x.png"; sourceTree = "<group>"; };
 		0F3CD1531A835E3900AA8E49 /* short_wait@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "short_wait@3x.png"; sourceTree = "<group>"; };
+		0F3CD1711A88346B00AA8E49 /* USHRestaurantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = USHRestaurantDetailViewController.h; sourceTree = "<group>"; };
+		0F3CD1721A88346B00AA8E49 /* USHRestaurantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = USHRestaurantDetailViewController.m; sourceTree = "<group>"; };
+		0F3CD1751A88837B00AA8E49 /* line_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line_black.png; sourceTree = "<group>"; };
+		0F3CD1761A88837B00AA8E49 /* line_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_black@2x.png"; sourceTree = "<group>"; };
+		0F3CD1771A88837B00AA8E49 /* line_black@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line_black@3x.png"; sourceTree = "<group>"; };
+		155511C45FC27522094925F9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F20567C2F33B73FC7D90A01 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202B1A407535A7718AF70C03 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,8 @@
 				0F3CD0F81A81FE6900AA8E49 /* UsherClient */,
 				0F3CD1121A81FE6900AA8E49 /* UsherClientTests */,
 				0F3CD0F71A81FE6900AA8E49 /* Products */,
+				9DFBB189120CABB9A24FF8CB /* Pods */,
+				DC57F7CD1C8C349B8DD72EAD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +177,7 @@
 		0F3CD1231A81FF7800AA8E49 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0F3CD1701A882BAE00AA8E49 /* Restaurant Detail */,
 				0F3CD1241A81FF8200AA8E49 /* Map View Controller */,
 			);
 			name = "View Controllers";
@@ -200,6 +217,7 @@
 		0F3CD1331A8346E400AA8E49 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				0F3CD1741A88836800AA8E49 /* Line */,
 				0F3CD1461A8346F500AA8E49 /* Map Icons */,
 			);
 			name = Images;
@@ -230,6 +248,42 @@
 			name = Network;
 			sourceTree = "<group>";
 		};
+		0F3CD1701A882BAE00AA8E49 /* Restaurant Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD1711A88346B00AA8E49 /* USHRestaurantDetailViewController.h */,
+				0F3CD1721A88346B00AA8E49 /* USHRestaurantDetailViewController.m */,
+			);
+			name = "Restaurant Detail";
+			sourceTree = "<group>";
+		};
+		0F3CD1741A88836800AA8E49 /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				0F3CD1751A88837B00AA8E49 /* line_black.png */,
+				0F3CD1761A88837B00AA8E49 /* line_black@2x.png */,
+				0F3CD1771A88837B00AA8E49 /* line_black@3x.png */,
+			);
+			name = Line;
+			sourceTree = "<group>";
+		};
+		9DFBB189120CABB9A24FF8CB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F20567C2F33B73FC7D90A01 /* Pods.debug.xcconfig */,
+				070BFDFE28711A921AE17F6D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC57F7CD1C8C349B8DD72EAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				155511C45FC27522094925F9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -237,9 +291,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0F3CD1191A81FE6900AA8E49 /* Build configuration list for PBXNativeTarget "UsherClient" */;
 			buildPhases = (
+				8F1716D769D42A7A5967D2FE /* Check Pods Manifest.lock */,
 				0F3CD0F21A81FE6900AA8E49 /* Sources */,
 				0F3CD0F31A81FE6900AA8E49 /* Frameworks */,
 				0F3CD0F41A81FE6900AA8E49 /* Resources */,
+				C2F100C5FCF9FDF40F5F9157 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -319,7 +375,10 @@
 				0F3CD15B1A835E3900AA8E49 /* short_wait@2x.png in Resources */,
 				0F3CD1591A835E3900AA8E49 /* no_wait@3x.png in Resources */,
 				0F3CD15C1A835E3900AA8E49 /* short_wait@3x.png in Resources */,
+				0F3CD17A1A88837B00AA8E49 /* line_black@3x.png in Resources */,
+				0F3CD1781A88837B00AA8E49 /* line_black.png in Resources */,
 				0F3CD1581A835E3900AA8E49 /* no_wait@2x.png in Resources */,
+				0F3CD1791A88837B00AA8E49 /* line_black@2x.png in Resources */,
 				0F3CD10A1A81FE6900AA8E49 /* LaunchScreen.xib in Resources */,
 				0F3CD1571A835E3900AA8E49 /* no_wait.png in Resources */,
 				0F3CD1071A81FE6900AA8E49 /* Images.xcassets in Resources */,
@@ -335,12 +394,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8F1716D769D42A7A5967D2FE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2F100C5FCF9FDF40F5F9157 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0F3CD0F21A81FE6900AA8E49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0F3CD0FF1A81FE6900AA8E49 /* AppDelegate.m in Sources */,
+				0F3CD1731A88346B00AA8E49 /* USHRestaurantDetailViewController.m in Sources */,
 				0F3CD1311A82091C00AA8E49 /* USHRestaurant.m in Sources */,
 				0F3CD0FC1A81FE6900AA8E49 /* main.m in Sources */,
 				0F3CD14A1A83507B00AA8E49 /* USHService.m in Sources */,
@@ -466,6 +559,7 @@
 		};
 		0F3CD11A1A81FE6900AA8E49 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F20567C2F33B73FC7D90A01 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UsherClient/Info.plist;
@@ -476,6 +570,7 @@
 		};
 		0F3CD11B1A81FE6900AA8E49 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 070BFDFE28711A921AE17F6D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UsherClient/Info.plist;
@@ -537,6 +632,7 @@
 				0F3CD11B1A81FE6900AA8E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F3CD11C1A81FE6900AA8E49 /* Build configuration list for PBXNativeTarget "UsherClientTests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +641,7 @@
 				0F3CD11E1A81FE6900AA8E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

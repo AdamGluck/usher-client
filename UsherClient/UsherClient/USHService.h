@@ -15,7 +15,8 @@ extern NSString * const USHServiceRestaurantsInfoKey;
 
 #define USHServiceSharedInstance ((USHService *)[USHService sharedInstance])
 
-+ (id)sharedInstance;
++ (instancetype)sharedInstance;
+- (instancetype)initWithNotificationCenter:(NSNotificationCenter *)notificationCenter;
 - (void)start;
 
 @end

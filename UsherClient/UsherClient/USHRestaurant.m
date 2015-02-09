@@ -15,9 +15,11 @@
 @property (nonatomic) CLLocationCoordinate2D locationCoordinate;
 
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSString *address;
+@property (nonatomic, strong) NSString *formattedAddress;
 @property (nonatomic, strong) NSString *phone;
 @property (nonatomic, strong) NSArray *descriptors;
+
+@property (nonatomic, strong) NSURL *imageUrl;
 
 @end
 
@@ -32,9 +34,11 @@
         self.locationCoordinate = CLLocationCoordinate2DMake([restaurantInfo[@"latitude"] doubleValue], [restaurantInfo[@"longitude"] doubleValue]);
         
         self.name = restaurantInfo[@"name"];
-        self.address = restaurantInfo[@"address"];
+        self.formattedAddress = restaurantInfo[@"address"];
         self.phone = restaurantInfo[@"phone"];
         self.descriptors = restaurantInfo[@"descriptors"];
+        
+        self.imageUrl = [NSURL URLWithString:restaurantInfo[@"imageUrl"]];
     }
     return self;
 }

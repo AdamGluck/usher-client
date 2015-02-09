@@ -9,18 +9,34 @@
 #import "USHRestaurant.h"
 #import "USHService.h"
 
-NSString *const USHServiceRestaurantsUpdated = @"service-restaurants-updated";
-NSString *const USHServiceRestaurantsInfoKey = @"service-restaurants-info-key";
+NSString * const USHServiceRestaurantsUpdated = @"service-restaurants-updated";
+NSString * const USHServiceRestaurantsInfoKey = @"service-restaurants-info-key";
+
+@interface USHService ()
+
+@property (nonatomic, strong) NSNotificationCenter *notificationCenter;
+
+@end
+
 
 @implementation USHService
 
 static USHService *__sharedInstance;
 
-+ (id)sharedInstance
+- (instancetype)initWithNotificationCenter:(NSNotificationCenter *)notificationCenter
+{
+    self = [super init];
+    if (self) {
+        self.notificationCenter = notificationCenter;
+    }
+    return self;
+}
+
++ (instancetype)sharedInstance
 {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        __sharedInstance = [[self alloc] init];
+        __sharedInstance = [[self alloc] initWithNotificationCenter:[NSNotificationCenter defaultCenter]];
     });
     
     return __sharedInstance;
@@ -40,10 +56,10 @@ static USHService *__sharedInstance;
                                      @"latitude": @"38.900543",
                                      @"longitude": @"-77.044533",
                                      
-                                     @"name": @"",
+                                     @"name": @"Flour + Water",
                                      @"address": @"1924 Pennsylvania Ave NW Washington, DC 20006",
                                      @"phone": @"(202) 822-8783",
-                                     @"descriptors" : @[@"American (traditional)"]};
+                                     @"descriptors" : @[@"American (traditional)", @"Fun", @"Simple"]};
     
     USHRestaurant *restaurant = [[USHRestaurant alloc] initWithRestaurantInfo:restaurantInfo];
     

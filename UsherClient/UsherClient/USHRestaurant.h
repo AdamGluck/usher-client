@@ -22,9 +22,11 @@ typedef NS_ENUM(NSInteger, USHRestaurantWaitType) {
 @property (nonatomic, readonly) CLLocationCoordinate2D locationCoordinate;
 
 @property (nonatomic, strong, readonly) NSString *name;
-@property (nonatomic, strong, readonly) NSString *address;
+@property (nonatomic, strong, readonly) NSString *formattedAddress;
 @property (nonatomic, strong, readonly) NSString *phone;
 @property (nonatomic, strong, readonly) NSArray *descriptors;
+
+@property (nonatomic, strong, readonly) NSURL *imageUrl;
 
 - (instancetype)initWithRestaurantInfo:(NSDictionary *)restaurantInfo;
 
