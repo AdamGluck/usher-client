@@ -9,9 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "USHRestaurant.h"
 
+@protocol USHRestaurantDetailViewControllerDelegate;
+
 @interface USHRestaurantDetailViewController : UIViewController
 
+@property (nonatomic, weak) id <USHRestaurantDetailViewControllerDelegate> delegate;
 - (void)presentInViewController:(UIViewController *)viewController
                  withRestaurant:(USHRestaurant *)restaurant;
+
+@end
+
+@protocol USHRestaurantDetailViewControllerDelegate <NSObject>
+
+@optional
+- (void)restaurantDetailViewControllerDidDismiss:(USHRestaurantDetailViewController *)detailViewController;
 
 @end

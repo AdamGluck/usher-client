@@ -15,7 +15,7 @@
 
 #import <MapKit/MapKit.h>
 
-@interface USHMapViewController () <MKMapViewDelegate>
+@interface USHMapViewController () <MKMapViewDelegate, USHRestaurantDetailViewControllerDelegate>
 
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) USHRestaurantDetailViewController *restaurantDetailController;
@@ -29,7 +29,6 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_restaurantsUpdated:) name:USHServiceRestaurantsUpdated object:nil];
-    
     [USHServiceSharedInstance start];
     
     [self.view addSubview:self.mapView];
@@ -40,7 +39,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-#pragma mark - MKMapViewDelegate 
+#pragma mark - <MKMapViewDelegate>
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
@@ -54,7 +53,7 @@
     return restaurantAnnotationView;
 }
 
--(void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
     if ([view isKindOfClass:[USHRestaurantAnnotationView class]]) {
         USHRestaurant *restaurant = ((USHRestaurantAnnotationView *)view).restaurantAnnotation.restaurant;
@@ -63,6 +62,17 @@
     }
 }
 
+#pragma mark - <USHRestaurantDetailViewControllerDelegate>
+
+- (void)restaurantDetailViewControllerDidDismiss:(USHRestaurantDetailViewController *)detailViewController
+{
+    for (id<MKAnnotation>annotation in self.mapView.annotations) {
+        MKAnnotationView *annotationView = [self.mapView viewForAnnotation:annotation];
+        if (annotationView.isSelected) {
+            [self.mapView deselectAnnotation:annotation animated:NO];
+        }
+    }
+}
 
 #pragma mark - Internal
 
@@ -110,7 +120,11 @@
 - (USHRestaurantDetailViewController *)restaurantDetailController
 {
     if (!_restaurantDetailController) {
-        _restaurantDetailController = [[USHRestaurantDetailViewController alloc] init];
+        _restaurantDetailController = ({
+            USHRestaurantDetailViewController *restaurantDetailViewController = [[USHRestaurantDetailViewController alloc] init];
+            restaurantDetailViewController.delegate = self;
+            restaurantDetailViewController;
+        });
     }
     return _restaurantDetailController;
 }

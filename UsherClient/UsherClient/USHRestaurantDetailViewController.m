@@ -105,9 +105,8 @@ static CGFloat const USHRestaurantDetailAnimationDuration = 0.2f;
         tapGestureRecognizer.delegate = self;
         tapGestureRecognizer;
     });
-    [self.view addGestureRecognizer:self.dismissTapGestureRecognizer];
     
-    self.isPresenting = NO;
+    [self _showContainerView:NO];
 }
 
 - (void)updateViewConstraints
@@ -179,41 +178,52 @@ static CGFloat const USHRestaurantDetailAnimationDuration = 0.2f;
     }
     
     [viewController addChildViewController:self];
-    
-    CGPoint parentViewControllerViewCenter = viewController.view.center;
-    self.view.center = CGPointMake(parentViewControllerViewCenter.x, parentViewControllerViewCenter.y + RESTAURANT_DETAIL_CONTAINER_HEIGHT);
-    [self _updateViewsForRestaurant:restaurant];
-    
     [viewController.view addSubview:self.view];
+    [self _updateViewsForRestaurant:restaurant];
     
     [UIView animateWithDuration:USHRestaurantDetailAnimationDuration
                           delay:0.0
-                        options:UIViewAnimationOptionCurveEaseInOut
+                        options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                         self.view.center = parentViewControllerViewCenter;
+                         [self _showContainerView:YES];
                         }
                      completion:^(BOOL finished){
-                         [self didMoveToParentViewController:viewController];
+                         self.dismissTapGestureRecognizer.enabled = YES;
+                         [viewController.view addGestureRecognizer:self.dismissTapGestureRecognizer];
                         }];
 }
 
 - (void)dismiss
 {
-    CGPoint parentViewControllerViewCenter = self.parentViewController.view.center;
-    CGPoint targetCenter = CGPointMake(parentViewControllerViewCenter.x, parentViewControllerViewCenter.y - RESTAURANT_DETAIL_CONTAINER_HEIGHT);
-    
     [UIView animateWithDuration:0.2f
-                          delay:0.0 options:UIViewAnimationOptionCurveEaseInOut
+                          delay:0.0
+                        options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                         self.view.center = targetCenter;
+                         [self _showContainerView:NO];
                      }
                      completion:^(BOOL finished) {
+                         self.dismissTapGestureRecognizer.enabled = NO;
+                         [self.parentViewController.view removeGestureRecognizer:self.dismissTapGestureRecognizer];
                          [self.view removeFromSuperview];
                          [self removeFromParentViewController];
                      }];
 }
 
 #pragma mark - Internal
+
+- (void)_showContainerView:(BOOL)shouldShow
+{
+    CGPoint currentCenter = self.containerView.center;
+    if (shouldShow) {
+        self.containerView.center = CGPointMake(currentCenter.x, currentCenter.y - RESTAURANT_DETAIL_CONTAINER_HEIGHT);
+        self.isPresenting = YES;
+    } else {
+        self.containerView.center = CGPointMake(currentCenter.x, currentCenter.y + RESTAURANT_DETAIL_CONTAINER_HEIGHT);
+        self.isPresenting = NO;
+    }
+    
+    [self updateViewConstraints];
+}
 
 - (void)_updateViewsForRestaurant:(USHRestaurant *)restaurant
 {
@@ -229,13 +239,15 @@ static CGFloat const USHRestaurantDetailAnimationDuration = 0.2f;
     
     self.waitTimeTextView.text = [NSString stringWithFormat:@"%ld minutes", (long) restaurant.waitTime];
     
-    [self.view layoutIfNeeded];
     [self updateViewConstraints];
 }
 
 - (void)_didTapDismissRecognizer:(UITapGestureRecognizer *)sender
 {
     [self dismiss];
+    if ([self.delegate respondsToSelector:@selector(restaurantDetailViewControllerDidDismiss:)]) {
+        [self.delegate restaurantDetailViewControllerDidDismiss:self];
+    }
 }
 
 @end
